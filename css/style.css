@@ -1,0 +1,113 @@
+.iqtop{
+	background-color: #1a1a1a;
+	border-color: #1a1a1a;
+}
+.iqlogo > img{
+	margin-top: -2px;
+	height: 25px;
+}
+
+.maincont{
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+.ggname{
+	margin-bottom: -50px;
+}
+
+.gg{
+	margin-bottom: -130px;
+}
+.descr{
+	padding-top: 7px;
+	font-size: 110%;
+}
+
+ul.dropdlist{
+	margin-top: -3px !important;
+}
+ul.dropdlist li{
+	margin-right: 10px;
+}
+ul.dropdlist li:last-child{
+	margin-right: 0;
+}
+.sstatus{
+	padding: 0;
+}
+.neststat{
+	padding-top: 5px; 
+	padding-left: 0;
+	padding-right: 0;
+	margin-top: 10px;
+}
+@media only screen and (max-width : 480px) {
+	.page-container{
+		padding: 10px;
+	}
+	
+}
+.page-container{
+	padding: 25px;
+}
+.statpart{
+	padding: 0;
+}
+
+.right > li > a > .caret {
+	margin: 2px 10px 4px 1px;
+}
+.nonbord{
+	border-color: #fff;
+	margin-bottom: 0px;
+}
+.loggah{
+	height: 250px;
+	overflow-y: scroll;
+	border: 1px solid #ccc;
+	list-style-type: none;
+	padding-left: 0px;
+}
+.loggah.main{
+	margin-top: 20px;
+}
+.loggah li{
+	border-bottom: 1px solid #ccc;
+	padding-left: 12px;
+	padding-bottom: 8px;
+	padding-top: 10px;
+}
+.wh{
+	background: #fff;
+}
+p.quote{
+	margin-left: 50px;
+    margin-top: 22px;
+    border-left: 6px solid #dedede;
+    padding-left: 10px;
+    width: 70%;
+    font-size: 105%;
+    font-weight: 600;
+    font-style: italic;
+}
+a.drdown{
+	margin-top: 50px;
+}
+.bordered{
+}
+.trigger{
+    font-size: 100%;
+}
+.lildown{
+    margin-top: 40px;
+}
+.noshad{
+	box-shadow: none;
+}
+.bottomed{
+    margin-bottom: -1px;
+}
+.lilrite{
+	margin-left: 10px;
+}

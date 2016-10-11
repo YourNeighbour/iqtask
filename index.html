@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="/assets/css/core.css" rel="stylesheet" type="text/css">
+	<link href="/assets/css/components.css" rel="stylesheet" type="text/css">
+	<link href="/assets/css/colors.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script type="text/javascript" src="/assets/js/plugins/loaders/pace.min.js"></script>
+	<script type="text/javascript" src="/assets/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/plugins/loaders/blockui.min.js"></script>
+	<script type="text/javascript" src="/assets/js/plugins/ui/nicescroll.min.js"></script>
+	<script type="text/javascript" src="/assets/js/plugins/ui/drilldown.js"></script>
+	<script type="text/javascript" src="/assets/js/plugins/ui/fab.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="/assets/js/plugins/visualization/echarts/echarts.js"></script>
+	<script type="text/javascript" src="/assets/js/core/app.js"></script>
+
+	<script type="text/javascript" src="/assets/js/charts/echarts/candlesticks_others.js"></script>
+	<!-- /theme JS files -->
+
+</head>
+
+<body class="navbar-bottom">
+	<div class="page-header page-header-inverse iqtop">
+
+		<div class="navbar navbar-inverse navbar-transparent">
+			<div class="navbar-header">
+				<a class="navbar-brand iqlogo" href="index.html"><img src="/assets/images/iq-option-logo.png" alt=""></a>
+
+				<ul class="nav navbar-nav pull-right visible-xs-block">
+					<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-grid3"></i></a></li>
+				</ul>
+			</div>
+
+			<div class="navbar-collapse collapse" id="navbar-mobile">
+
+				<div class="navbar-right">
+					<ul class="nav navbar-nav">
+
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="page-container maincont">
+
+		<div class="page-content">
+
+			<div class="content-wrapper">
+
+				<div class="row">
+					<div class="col-md-7 statpart">
+						<div class="col-md-6">
+
+							<div class="panel panel-flat">
+								<div class="panel-heading ggname">
+									<h5 class="panel-title">Uptime Day</h5>
+								</div>
+								<div class="panel-body gg">
+									<div class="chart-container">
+										<div class="chart has-fixed-height" id="gauge_basic"></div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-md-6">
+
+							<div class="panel panel-flat">
+								<div class="panel-heading ggname">
+									<h5 class="panel-title">Uptime Mounth</h5>
+								</div>
+								<div class="panel-body gg">
+									<div class="chart-container">
+										<div class="chart has-fixed-height" id="gauge_mounth"></div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-md-12">
+							<div class="panel panel-flat">
+								<div class="panel-heading">
+									<h6 class="panel-title">Incidents<a class="heading-elements-toggle"></a></h6>
+									<div class="heading-elements">
+										<ul class="icons-list right">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">All incidents<span class="caret"></span></a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-sync"></i> Update data</a></li>
+													<li><a href="#"><i class="icon-list-unordered"></i> Detailed log</a></li>
+													<li><a href="#"><i class="icon-pie5"></i> Statistics</a></li>
+													<li class="divider"></li>
+													<li><a href="#"><i class="icon-cross3"></i> Clear list</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">All priorities<span class="caret"></span></a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-sync"></i> Update data</a></li>
+													<li><a href="#"><i class="icon-list-unordered"></i> Detailed log</a></li>
+													<li><a href="#"><i class="icon-pie5"></i> Statistics</a></li>
+													<li class="divider"></li>
+													<li><a href="#"><i class="icon-cross3"></i> Clear list</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="table-responsive">
+									<table class="table table-md text-nowrap">
+										<tbody>
+											<tr>
+												<td class="col-md-5">
+													<div class="media-left">
+														<div id="campaigns-donut"><svg width="42" height="42"><g transform="translate(21,21)"><g class="d3-arc" style="stroke: rgb(255, 255, 255); cursor: pointer;"><path style="fill: rgb(102, 187, 106);" d="M1.1634144591899855e-15,19A19,19 0 0,1 -14.050144241469582,12.790365389381929L-7.025072120734791,6.3951826946909645A9.5,9.5 0 0,0 5.817072295949927e-16,9.5Z" transform="translate(0,0)"></path></g><g class="d3-arc" style="stroke: rgb(255, 255, 255); cursor: pointer;"><path style="fill: rgb(149, 117, 205);" d="M-14.050144241469582,12.790365389381929A19,19 0 0,1 0.6493373977393208,-18.988900993577726L0.3246686988696604,-9.494450496788863A9.5,9.5 0 0,0 -7.025072120734791,6.3951826946909645Z" transform="translate(0,0)"></path></g><g class="d3-arc" style="stroke: rgb(255, 255, 255); cursor: pointer;"><path style="fill: rgb(255, 112, 67);" d="M0.6493373977393208,-18.988900993577726A19,19 0 0,1 5.817072295949928e-15,19L2.908536147974964e-15,9.5A9.5,9.5 0 0,0 0.3246686988696604,-9.494450496788863Z" transform="translate(0,0)"></path></g></g></svg></div>
+													</div>
+
+													<div class="media-left">
+														<h5 class="text-semibold no-margin">Type of incidets</h5>
+														<ul class="list-inline list-inline-condensed no-margin">
+															<li>
+																<span class="text-muted">For last 30 days</span>
+															</li>
+														</ul>
+													</div>
+													
+												</td>
+
+												<td class="col-md-5">
+													<div class="media-left">
+														<div id="campaign-status-pie"><svg width="42" height="42"><g transform="translate(21,21)"><g class="d3-arc" style="stroke: rgb(255, 255, 255); cursor: pointer;"><path style="fill: rgb(41, 182, 246);" d="M1.1634144591899855e-15,19A19,19 0 0,1 -10.035763324841723,-16.133302652828462L-5.017881662420861,-8.066651326414231A9.5,9.5 0 0,0 5.817072295949927e-16,9.5Z"></path></g><g class="d3-arc" style="stroke: rgb(255, 255, 255); cursor: pointer;"><path style="fill: rgb(239, 83, 80);" d="M-10.035763324841723,-16.133302652828462A19,19 0 0,1 17.35205039879773,-7.739919053684189L8.676025199398865,-3.8699595268420945A9.5,9.5 0 0,0 -5.017881662420861,-8.066651326414231Z"></path></g><g class="d3-arc" style="stroke: rgb(255, 255, 255); cursor: pointer;"><path style="fill: rgb(129, 199, 132);" d="M17.35205039879773,-7.739919053684189A19,19 0 0,1 14.540850859600345,12.229622082421841L7.270425429800173,6.1148110412109205A9.5,9.5 0 0,0 8.676025199398865,-3.8699595268420945Z"></path></g><g class="d3-arc" style="stroke: rgb(255, 255, 255); cursor: pointer;"><path style="fill: rgb(153, 153, 153);" d="M14.540850859600345,12.229622082421841A19,19 0 0,1 5.817072295949928e-15,19L2.908536147974964e-15,9.5A9.5,9.5 0 0,0 7.270425429800173,6.1148110412109205Z"></path></g></g></svg></div>
+													</div>
+
+													<div class="media-left">
+														<h5 class="text-semibold no-margin">Priority</h5>
+														<ul class="list-inline list-inline-condensed no-margin">
+															<li>
+																<span class="text-muted">For last 30 days</span>
+															</li>
+														</ul>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>	
+								</div>
+
+								
+							</div>
+							<div class="col-md-12 sstatus">
+
+
+								<div class="panel panel-flat panel-collapsed bottomed">
+									<div class="panel-heading bordered">
+										<div class="media-left media-middle">
+											<a href="#" class="btn bg-blue btn-rounded btn-icon btn-xs">
+												<span class="glyphicon glyphicon-phone"></span>
+											</a>
+										</div>
+
+										<div class="media-left">
+											<div class="descr"><a href="#" class="text-default">It's a long established fact that a reader</a></div>
+										</div>
+										<div class="heading-elements">
+											<ul class="icons-list dropdlist">
+												<li><h6 class="text-muted">Jan 1, 0:30</h6></li>
+												<li><span class="label bg-primary">10 min</span></li>
+												<li><span class="text-success"><i class="icon-stats-growth2 position-left"></i>High</span></li>
+												<li><a data-action="collapse" class=""></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="panel-body neststat noshad">
+										<div class="panel nonbord panel-collapsed noshad">
+											<div class="panel-heading wh noshad">
+												<p>This table demonstrate all classes for sidebar container, responsible for the sidebar whidth and color.</p>
+												<p class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt<p></p></p>
+												<div class="heading-elements lildown">
+													<ul class="icons-list dropdlist">
+														<li><h6 class="text-muted trigger">Triggers(99)</h6></li>
+														<li><a data-action="collapse"></a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="panel-body noshad">
+												<ul class="loggah main">
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+												</ul>
+											</div>
+
+										</div>
+
+
+									</div>
+
+								</div>
+
+							</div>
+							<div class="col-md-12 sstatus">
+
+
+								<div class="panel panel-flat bottomed">
+									<div class="panel-heading bordered">
+										<div class="media-left media-middle">
+											<a href="#" class="btn bg-warning-400 btn-rounded btn-icon btn-xs">
+												<span class="glyphicon glyphicon-tags"></span>
+											</a>
+										</div>
+
+										<div class="media-left">
+											<div class="descr"><a href="#" class="text-default">It's a long established fact that a reader</a></div>
+										</div>
+										<div class="heading-elements">
+											<ul class="icons-list dropdlist">
+												<li><h6 class="text-muted">Jan 1, 0:30</h6></li>
+												<li><span class="label bg-danger">64 min</span></li>
+												<li><span class="text-danger"><i class="icon-stats-decline2 position-left"></i>Low</span></li>
+												<li><a data-action="collapse" class=""></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="panel-body neststat noshad">
+										<div class="panel nonbord panel-collapsed noshad">
+											<div class="panel-heading wh noshad">
+												<p>This table demonstrate all classes for sidebar container, responsible for the sidebar whidth and color.</p>
+												<p class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt<p></p></p>
+												<div class="heading-elements lildown">
+													<ul class="icons-list dropdlist">
+														<li><h6 class="text-muted trigger">Triggers(99)</h6></li>
+														<li><a data-action="collapse"></a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="panel-body noshad">
+												<ul class="loggah main">
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+												</ul>
+											</div>
+
+										</div>
+
+
+									</div>
+
+								</div>
+
+							</div>
+							<div class="col-md-12 sstatus">
+
+
+								<div class="panel panel-flat panel-collapsed bottomed">
+									<div class="panel-heading bordered">
+										<div class="media-left media-middle">
+											<a href="#" class="btn bg-success-400 btn-rounded btn-icon btn-xs">
+												<span class="glyphicon glyphicon-tree-deciduous"></span>
+											</a>
+										</div>
+
+										<div class="media-left">
+											<div class="descr"><a href="#" class="text-default">It's a long established fact that a reader</a></div>
+										</div>
+										<div class="heading-elements">
+											<ul class="icons-list dropdlist">
+												<li><h6 class="text-muted">Jan 1, 0:30</h6></li>
+												<li><span class="label bg-primary">10 min</span></li>
+												<li><span class="text-success"><i class="icon-stats-growth2 position-left"></i>High</span></li>
+												<li><a data-action="collapse" class=""></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="panel-body neststat noshad">
+										<div class="panel nonbord panel-collapsed noshad">
+											<div class="panel-heading wh noshad">
+												<p>This table demonstrate all classes for sidebar container, responsible for the sidebar whidth and color.</p>
+												<p class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt<p></p></p>
+												<div class="heading-elements lildown">
+													<ul class="icons-list dropdlist">
+														<li><h6 class="text-muted trigger">Triggers(99)</h6></li>
+														<li><a data-action="collapse"></a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="panel-body noshad">
+												<ul class="loggah main">
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+													<li>Postgres: PostgresSQL replication lag is too high on 1-prog-pgsql-02x.mobbtech.com <span class="label bg-grey-400 lilrite">Jan 1, 0:30</span></li>
+												</ul>
+											</div>
+
+										</div>
+
+
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-5">
+
+						<div class="panel panel-flat">
+							<div class="panel-heading">
+								<h5 class="panel-title">Incidents timeline</h5>
+								<div class="heading-elements">
+									<ul class="icons-list">
+										<li>Number of processed options in the second</li>
+										<li><a data-action="collapse"></a></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="panel-body">
+								<div class="chart-container">
+									<div class="chart has-fixed-height" id="stacked_lines"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-12 sstatus">
+
+							
+							<div class="panel panel-success">
+								<div class="panel-heading ">
+									<h6 class="panel-title">Current system status</h6>
+									<div class="heading-elements">
+										<ul class="icons-list dropdlist">
+											<li><h6 class="text-semibold">OK</h6></li>
+											<li><span class="label bg-white">356</span></li>
+											<li><a data-action="collapse" class=""></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="panel-body neststat noshad">
+									<div class="panel nonbord panel-collapsed noshad">
+										<div class="panel-heading wh noshad">
+											<h6 class="panel-title"><span class="status-mark border-success position-left"></span>Frontend</h6>
+											<div class="heading-elements">
+												<ul class="icons-list dropdlist">
+													<li><h6 class="text-semibold">OK</h6></li>
+													<li><span class="label bg-success">356</span></li>
+													<li><a data-action="collapse" class=""></a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="panel-body noshad">
+											<ul class="loggah">
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+											</ul>
+										</div>
+
+									</div>
+
+									<div class="panel nonbord panel-collapsed noshad">
+										<div class="panel-heading wh noshad">
+											<h6 class="panel-title"><span class="status-mark border-success position-left"></span>Postgres</h6>
+											<div class="heading-elements">
+												<ul class="icons-list dropdlist">
+													<li><h6 class="text-semibold">OK</h6></li>
+													<li><span class="label bg-success">356</span></li>
+													<li><a data-action="collapse" class=""></a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="panel-body noshad">
+											<ul class="loggah">
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+											</ul>
+										</div>
+
+									</div>
+
+									<div class="panel nonbord panel-collapsed noshad">
+										<div class="panel-heading wh noshad">
+											<h6 class="panel-title"><span class="status-mark border-success position-left"></span>Bus</h6>
+											<div class="heading-elements wh">
+												<ul class="icons-list dropdlist">
+													<li><h6 class="text-semibold">OK</h6></li>
+													<li><span class="label bg-success">356</span></li>
+													<li><a data-action="collapse" class=""></a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="panel-body">
+											<ul class="loggah">
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+											</ul>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+</body>
+</html>
